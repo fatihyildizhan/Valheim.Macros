@@ -15,6 +15,8 @@ namespace Valheim.Macros.UI.Skill
             Console.WriteLine("5 secs left");
             await Task.Delay(5000);
 
+            int counter = 0;
+
             while (true)
             {
                 if (IsBreak)
@@ -23,6 +25,17 @@ namespace Valheim.Macros.UI.Skill
                     IsBreak = false;
                     break;
                 }
+
+                if (counter %6 == 0)
+                {
+                    SendKeys.Send("1");
+                    await Task.Delay(100);
+                    SendKeys.Send("2");
+                    await Task.Delay(100);
+                    SendKeys.Send("3");
+                    await Task.Delay(100);
+                }
+                counter++;
 
                 Keyboard.HoldKey((byte)Keys.LShiftKey, 15000);
                 await Task.Delay(10);

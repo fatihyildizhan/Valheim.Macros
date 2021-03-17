@@ -9,6 +9,7 @@ namespace Valheim.Macros.UI.Extensions
 
         const int KEY_DOWN_EVENT = 0x0001; //Key down flag
         const int KEY_UP_EVENT = 0x0002; //Key up flag
+        const int MOUSE_LEFT = 0x0201;
 
         public static void HoldKey(byte key, int duration)
         {

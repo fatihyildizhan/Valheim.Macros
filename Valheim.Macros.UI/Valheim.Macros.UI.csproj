@@ -53,10 +53,12 @@
       <DependentUpon>Basics.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\Keyboard.cs" />
+    <Compile Include="Extensions\Mouse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill\JumpSkill.cs" />
     <Compile Include="Skill\PrivacySkill.cs" />
+    <Compile Include="Skill\ArrowSkill.cs" />
     <Compile Include="Skill\RunSkill.cs" />
     <EmbeddedResource Include="Basics.resx">
       <DependentUpon>Basics.cs</DependentUpon>

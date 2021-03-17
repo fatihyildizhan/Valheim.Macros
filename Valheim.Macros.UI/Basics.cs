@@ -17,6 +17,7 @@ namespace Valheim.Macros.UI
         JumpSkill jump = new JumpSkill();
         RunSkill run = new RunSkill();
         PrivacySkill privacy = new PrivacySkill();
+        ArrowSkill arrow = new ArrowSkill();
 
         private async void btnJumpStart_Click(object sender, EventArgs e)
         {
@@ -58,6 +59,20 @@ namespace Valheim.Macros.UI
 
             await Task.Delay(1000);
             btnPrivacyStart.Enabled = true;
+        }
+
+        private async void btnArrowStart_Click(object sender, EventArgs e)
+        {
+            btnArrowStart.Enabled = false;
+            await arrow.StartArrowAsync();
+        }
+
+        private async void btnArrowStop_Click(object sender, EventArgs e)
+        {
+            arrow.Stop();
+
+            await Task.Delay(1000);
+            btnArrowStart.Enabled = true;
         }
     }
 }
